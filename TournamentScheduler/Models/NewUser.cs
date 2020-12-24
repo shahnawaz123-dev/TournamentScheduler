@@ -7,12 +7,89 @@ namespace TournamentScheduler.Models
 {
     public class NewUser
     {
-        public String firstName { get; set; }
-        public String lastName { get; set; }
-        public string email { get; set; }
-        public char phoneNumber { get; set; }
-        public DateTime dateOfBirth { get; set; }
-        public String userID { get; set; }
+        private String fName;
+        public String firstName {
+            get
+            {
+                return fName;
+            }
+            set 
+            {
+                fName = value;
+            } 
+        }
+
+        private String lName;
+        public String lastName {
+            get
+            {
+                return lName;
+            }
+            set
+            {
+                lName = value;
+            }
+        }
+
+        private String Email;
+        public String email {
+            get
+            {
+                return Email;
+            }
+            set
+            {
+                Email = value;
+            }
+        }
+
+        private Char number;
+        public Char phoneNumber {
+            get
+            {
+                return number;
+            }
+            set
+            {
+                number = value;
+            }
+        }
+
+        private DateTime DOB;
+        public DateTime dateOfBirth {
+            get
+            {
+                return DOB;
+            }
+            set
+            {
+                DOB = value;
+            }
+        }
+
+        private String ID;
+        public String userID {
+            get
+            {
+                return ID;
+            } 
+            set
+            {
+                ID = value;
+            }
+        }
+
+        private String Password;
+        public String password {
+            get
+            {
+                return Password;
+            }
+            set
+            {
+                Password = value;
+            }
+        }
 
 
     }
