@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TournamentScheduler.Models;
 
 namespace TournamentScheduler.Models
 {
@@ -55,5 +56,7 @@ namespace TournamentScheduler.Models
                 venue = value;
             }
         }
+
+
     }
 }
