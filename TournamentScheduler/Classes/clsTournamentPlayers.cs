@@ -2,11 +2,77 @@
 {
     public class clsTournamentPlayers
     {
-        public long players { get; set; }
-        public long teams { get; set; }
-        public string playerName { get; set; }
-        public string teamName { get; set; }
-        public long teamID { get; set; }
-        public long playerID { get; set; }
+        private long Players;
+        public long players {
+            get
+            {
+                return Players;
+            }
+            set
+            {
+                Players = value;
+            }
+        }
+
+        private long Teams;
+        public long teams {
+            get
+            {
+                return Teams;
+            }
+            set
+            {
+                Teams = value;
+            }
+        }
+
+        private string pName;
+        public string playerName {
+            get
+            {
+                return pName;
+            }
+            set
+            {
+                pName = value; 
+            }
+        }
+
+        private string tName;
+        public string teamName {
+            get
+            {
+                return tName;
+            }
+            set
+            {
+                tName = value;
+            }
+        }
+
+        private long tID;
+        public long teamID {
+            get
+            {
+                return tID;
+            }
+            set
+            {
+                tID = value;
+            }
+        }
+
+        private long pID;
+        public long playerID { 
+            get
+            {
+                return pID;
+            }
+            set
+            {
+                pID = value;
+            }
+        }
+      
     }
 }

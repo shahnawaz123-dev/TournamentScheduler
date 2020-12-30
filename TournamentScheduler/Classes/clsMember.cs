@@ -1,12 +1,31 @@
-﻿namespace Classes
+﻿using Classes;
+
+namespace Classes
 {
     public class clsMember
     {
-        public clsMember()
-        {
+        private string uID;
+        public string ID {
+            get
+            {
+                return uID;
+            }
+            set
+            {
+                uID = value;
+            }
         }
 
-        public string ID { get; set; }
-        public string password { get; set; }
+        private string uPassword;
+        public string password {
+            get
+            {
+                return uPassword;
+            }
+            set
+            {
+                uPassword = value;
+            }
+        }
     }
 }
