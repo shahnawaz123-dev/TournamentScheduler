@@ -42,5 +42,14 @@ namespace Testing
             tournament.Venue = TestData;
             Assert.AreEqual(tournament.Venue, TestData);
         }
+
+        [TestMethod]
+        public void TournamentTypeProperty()
+        {
+            clsTournament tournament = new clsTournament();
+            String TestData = "RoundRobin";
+            tournament.TournamentType = TestData;
+            Assert.AreEqual(tournament.TournamentType, TestData);
+        }
     }
 }
