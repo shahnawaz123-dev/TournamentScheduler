@@ -64,6 +64,8 @@ namespace Classes
                 tournamentType = value;
             }
         }
+
+        
     }
     }
 
