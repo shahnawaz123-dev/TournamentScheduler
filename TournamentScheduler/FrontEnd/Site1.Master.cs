@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FrontEnd
 {
-    public partial class TournamentForm : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -15,11 +15,6 @@ namespace FrontEnd
         }
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
-        {
-
-        }
-
-        protected void generateBtn_Click(object sender, EventArgs e)
         {
 
         }
