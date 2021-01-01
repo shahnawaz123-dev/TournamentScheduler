@@ -68,5 +68,23 @@ namespace Testing
             tournamentPl.playerID = TestData;
             Assert.AreEqual(tournamentPl.playerID, TestData);
         }
+
+        [TestMethod]
+        public void ThisPlayer()
+        {
+           
+            clsTournamentPlayers testPlayer = new clsTournamentPlayers();
+            testPlayer.playerName = "player 1";
+            testPlayer.teamName = "team 1";
+            testPlayer.playerID = 1;
+            testPlayer.teamID = 1;
+            testPlayer.ThisPlayer = testPlayer;
+            Assert.AreEqual(testPlayer.ThisPlayer, testPlayer);
+
+        }
+
+        
+
+       
     }
 }

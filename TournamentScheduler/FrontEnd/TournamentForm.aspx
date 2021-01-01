@@ -40,9 +40,8 @@
             margin-left: 600px;
         }
         .auto-style8 {
-            width: 396px;
-            height: 275px;
-            margin-left: 0px;
+            width: 544px;
+            height: 348px;
         }
     </style>
 </head>
@@ -58,29 +57,29 @@
             &nbsp;</p>
         <p class="auto-style1">
             Tournament Name&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tNametxtBox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tournamentNametxtBox" runat="server" OnTextChanged="tournamentNametxtBox_TextChanged"></asp:TextBox>
         </p>
         <p class="auto-style2">
-            Start Date&nbsp;&nbsp;&nbsp;&nbsp;
+            Start Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         </p>
         <p class="auto-style7">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Calendar ID="sDate" runat="server"></asp:Calendar>
+            <asp:Calendar ID="sDate" runat="server" OnSelectionChanged="sDate_SelectionChanged"></asp:Calendar>
         </p>
         <p class="auto-style3">
             End Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
         <p class="auto-style7">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Calendar ID="eDate" runat="server"></asp:Calendar>
+            <asp:Calendar ID="eDate" runat="server" OnSelectionChanged="eDate_SelectionChanged"></asp:Calendar>
         </p>
         <p class="auto-style4">
             Venue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtBoxVenue" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtBoxVenue" runat="server" OnTextChanged="txtBoxVenue_TextChanged"></asp:TextBox>
         </p>
         <p class="auto-style5">
             Tournament Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:DropDownList ID="tTypeDropList" runat="server">
+            <asp:DropDownList ID="tTypeDropList" runat="server" OnSelectedIndexChanged="tTypeDropList_SelectedIndexChanged">
                 <asp:ListItem>Round Robin</asp:ListItem>
                 <asp:ListItem>Group Stage</asp:ListItem>
                 <asp:ListItem>Group Stage and Knockout</asp:ListItem>
@@ -91,14 +90,28 @@
             Add Players/Teams
         </p>
         <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <textarea id="playerTxtArea" class="auto-style8" name="S1"></textarea>
-            <asp:Button ID="addButton" runat="server" Text="Add" />
-        </p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="PTDropDown" runat="server" Width="136px" OnSelectedIndexChanged="PTDropDown_SelectedIndexChanged">
+                <asp:ListItem>Player</asp:ListItem>
+                <asp:ListItem>Team</asp:ListItem>
+            </asp:DropDownList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Player/Team Name&nbsp;
+            <asp:TextBox ID="pNameTNametxtBox" runat="server" OnTextChanged="pNameTNametxtBox_TextChanged"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p class="auto-style1">
+            <textarea id="pNameTNameTxtArea" class="auto-style8" name="S1"></textarea>&nbsp;
+            &nbsp;&nbsp;
+            &nbsp;<asp:Button ID="addBtn" runat="server" OnClick="addBtn_Click" Text="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="deleteBtn" runat="server" OnClick="deleteBtn_Click" Text="Delete" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p class="auto-style1">
             &nbsp;</p>
         <p class="auto-style1">
-            <asp:Button ID="generateBtn" runat="server" Text="Generate Tournament" />
+            <asp:Button ID="generateBtn" runat="server" Text="Generate Tournament" OnClick="generateBtn_Click1" />
         </p>
     </form>
 </body>

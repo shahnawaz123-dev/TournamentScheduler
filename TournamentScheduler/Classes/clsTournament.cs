@@ -65,6 +65,33 @@ namespace Classes
             }
         }
 
+        public string Valid(string name, string venue)
+        {
+            String error = "";
+
+            if(name.Length == 0)
+            {
+                error = error + "Tournament Name has not been filled";
+            }
+
+            if(name.Length > 20)
+            {
+                error = error + "Tournament Name cannot exceed 20 characters";
+            }
+
+            if(venue.Length == 0)
+            {
+                error = error + "Venue has not been filled";
+            }
+
+            if (venue.Length > 20)
+            {
+                error = error + "Venue cannot exceed 20 characters";
+            }
+
+            return error;
+        }
+
         
     }
     }
