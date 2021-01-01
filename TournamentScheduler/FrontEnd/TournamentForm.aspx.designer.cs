@@ -24,13 +24,13 @@ namespace FrontEnd
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// tNametxtBox control.
+        /// tournamentNametxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tNametxtBox;
+        protected global::System.Web.UI.WebControls.TextBox tournamentNametxtBox;
 
         /// <summary>
         /// sDate control.
@@ -69,13 +69,40 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.DropDownList tTypeDropList;
 
         /// <summary>
-        /// addButton control.
+        /// PTDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addButton;
+        protected global::System.Web.UI.WebControls.DropDownList PTDropDown;
+
+        /// <summary>
+        /// pNameTNametxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox pNameTNametxtBox;
+
+        /// <summary>
+        /// addBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addBtn;
+
+        /// <summary>
+        /// deleteBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button deleteBtn;
 
         /// <summary>
         /// generateBtn control.

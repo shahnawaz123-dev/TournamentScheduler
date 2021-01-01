@@ -73,6 +73,16 @@
                 pID = value;
             }
         }
-      
+
+        public clsTournamentPlayers ThisPlayer { get; set; }
+
+        // public string Valid(string playerName, string teamName, long playerID, long teamID)
+        //{
+
+        //}
+
+
+
+
     }
 }
