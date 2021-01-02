@@ -46,7 +46,7 @@
     <Compile Include="clsMember.cs" />
     <Compile Include="clsNewUser.cs" />
     <Compile Include="clsTournament.cs" />
-    <Compile Include="clsTournamentPlayers.cs" />
+    <Compile Include="clsTournamentParticipants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

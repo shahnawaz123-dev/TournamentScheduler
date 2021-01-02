@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,9 +12,10 @@ namespace FrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        
         protected void tournamentNametxtBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -56,6 +58,13 @@ namespace FrontEnd
 
         protected void addBtn_Click(object sender, EventArgs e)
         {
+
+           
+
+            
+
+
+
 
 
         }
